@@ -22,7 +22,23 @@ public:
     }
 };
 
+void DanhSachTaiKhoan::sapXep() {
 
+    for (int i = 0; i < n - 1; i++) {
+
+        for (int j = i + 1; j < n; j++) {
+
+            if (a[i].getSoDu() < a[j].getSoDu()) {
+
+                TaiKhoan tam = a[i];
+
+                a[i] = a[j];
+
+                a[j] = tam;
+            }
+        }
+    }
+}
 
 
 // Hàm main để chạy thử nghiệm
